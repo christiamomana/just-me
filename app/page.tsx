@@ -1,27 +1,71 @@
 "use client";
 
 import Image from "next/image";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import Stories from "react-insta-stories";
+import { LinkToSocial } from "./components/LinkToSocial/LinkToSocial";
 
 const stories = [
   "https://lh3.googleusercontent.com/pw/ABLVV84B3fFgEhZyVO60EaH7tJOXcUqfGWjo_55lleYu9isxjrx0lVQtoOuRz09Sk3GwzXYmVuvbRKXI-CeBkPDb0mKhRUkr2Ab1poMOA8wLvwjlgskJaYsiWN6dybnpt0Gq2VeuSI90sP7i-vrs9auFKIdiIA=w1132-h1508-s-no-gm?authuser=0",
+  {
+    url: "https://firebasestorage.googleapis.com/v0/b/personal-eea8d.appspot.com/o/just-me%2FIMG_4542.MOV?alt=media&token=818437d3-4664-478b-885f-e0c74344e345",
+    duration: 5000, // ignored
+    type: "video",
+  },
 ];
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Christiam Omaña&nbsp;
-          <code className="font-mono font-bold">full_stack_developer</code>
+      <div className="relative mx-auto mt-16 grid w-full max-w-container grid-cols-1 px-4 sm:mt-20 sm:px-6 lg:px-8 xl:mt-32">
+        <div
+          className="col-start-1 row-start-1 h-7 text-base text-white	font-semibold leading-7 text-sky-500"
+          aria-hidden="true"
+        >
+          Full stack developer
+        </div>
+        <h1 className="col-start-1 row-start-2 mt-4 max-w-[36rem] text-4xl text-white	font-extrabold tracking-tight text-slate-900 sm:text-7xl xl:max-w-[43.5rem]">
+          Christiam Omaña
+        </h1>
+        <p className="col-start-1 row-start-3 mt-4 max-w-lg text-lg text-zinc-300">
+          Desde 2015, desempeño el rol de desarrollador de software, acumulando
+          experiencia en diversas tecnologías y destacándome por mi enfoque
+          proactivo, pasión por el aprendizaje constante y disposición para
+          abordar desafíos significativos.
         </p>
-        <Stories
-          stories={stories}
-          defaultInterval={1500}
-          width={432}
-          height={432}
-        />
-        <div>holas</div>
+        <div className="col-start-1 row-start-4  sm:flex-row sm:space-x-4 sm:space-y-0">
+          <LinkToSocial Icon={GitHubIcon} />
+          <LinkToSocial Icon={GitHubIcon} />
+          <a
+            className=" justify-center rounded-x text-sm font-semibold py-3 px-4 bg-slate-900 text-green-400 hover:bg-slate-700"
+            href="/components"
+          >
+            <span>
+              <LinkedInIcon />
+              <span
+                aria-hidden="true"
+                className="hidden text-slate-400 sm:inline"
+              >
+                →
+              </span>
+            </span>
+          </a>
+          <a
+            className="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 "
+            href="/templates"
+          >
+            <span>
+              Explore templates
+              <span
+                aria-hidden="true"
+                className="hidden text-black/25 sm:inline"
+              >
+                →
+              </span>
+            </span>
+          </a>
+        </div>
       </div>
 
       <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
