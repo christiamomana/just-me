@@ -1,10 +1,9 @@
-import { ReactElement, ReactNode } from "react";
 import { SvgIconProps } from "@material-ui/core/SvgIcon";
 
 export const LinkToSocial = ({
   Icon,
 }: {
-  Icon: ReactElement<SvgIconProps>;
+  Icon: React.ComponentType<SvgIconProps>;
 }) => {
   return (
     <a
